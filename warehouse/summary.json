@@ -1,0 +1,18 @@
+{
+  "db": "D:\\code\\肝癌数据\\warehouse\\hcc_llm.duckdb",
+  "tables": {
+    "patients": 23506,
+    "llm_samples": 16233,
+    "clinical_text": 23506,
+    "text_features": 23506
+  },
+  "views": [
+    "v_patient_llm"
+  ],
+  "schema_prompt": "D:\\code\\肝癌数据\\warehouse\\llm_sql_schema_prompt.txt",
+  "example_queries": [
+    "SELECT split, count(*), avg(label_death) FROM llm_samples GROUP BY 1",
+    "SELECT patient_sn, label_death, input_chars FROM llm_samples WHERE label_death=1 LIMIT 10",
+    "SELECT column_name, data_type FROM schema_catalog WHERE table_name='patients'"
+  ]
+}

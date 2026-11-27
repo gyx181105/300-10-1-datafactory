@@ -1,0 +1,24 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.Python
+*.egg-info/
+
+# Node / frontend
+web/node_modules/
+web/dist/
+web/dist-ssr/
+*.local
+
+# 原始与大体量产出（含患者级数据，勿入库）
+原始数据/
+warehouse/*.duckdb
+output/
+dataset/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
